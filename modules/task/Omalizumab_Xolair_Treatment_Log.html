@@ -1,0 +1,26 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+        VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="PBS_approved_1,PBS_approved_1_reason,Not_Subsidised_1,Not_Subsidised_1_text,first_dose_date,First_Dose,Actual_First_Dose,Actual_First_Dose_Fortnightly,Actual_First_Dose_Monthly,next_visit2,Non_sub_Omalizumab_treatment,non_treatment_started_date,Ongoing,non_treatment_stopped_date,non_treatment_stopped_reason,dose_non,Omalizumab_treatment,treatment_started_date,treatment_stopped_date,Omalizumab_treatment_reason,dose_after,PBS_approved_2,PBS_approved_2_reason,Not_Subsidised_2,Not_Subsidised_2_text,second_dose_date,second_dose,Actual_second_dose,Actual_second_dose_Fortnightly,Actual_second_dose_Monthly,next_visit3,PBS_approved_3,PBS_approved_3_reason,Not_Subsidised_3,Not_Subsidised_3_text,third_dose_date,third_dose,Actual_third_dose,Actual_third_dose_Fortnightly,Actual_third_dose_Monthly,next_visit4,PBS_approved_4,PBS_approved_4_reason,Not_Subsidised_4,Not_Subsidised_4_text,forth_dose_date,forth_dose,Actual_forth_dose,Actual_forth_dose_Fortnightly,Actual_forth_dose_Monthly,next_visit5,PBS_approved_5,PBS_approved_5_reason,Not_Subsidised_5,Not_Subsidised_5_text,fifth_dose_date,fifth_dose,Actual_fifth_dose,Actual_fifth_dose_Fortnightly,Actual_fifth_dose_Monthly,next_visit6,PBS_approved_6,PBS_approved_6_reason,Not_Subsidised_6,Not_Subsidised_6_text,sixth_dose_date,sixth_dose,Actual_sixth_dose,Actual_sixth_dose_Fortnightly,Actual_sixth_dose_Monthly,next_visit7,PBS_approved_7,PBS_approved_7_reason,Not_Subsidised_7,Not_Subsidised_7_text,seventh_dose_date,seventh_dose,Actual_seventh_dose,Actual_seventh_dose_Fortnightly,Actual_seventh_dose_Monthly,next_visit8,PBS_approved_8,PBS_approved_8_reason,Not_Subsidised_8,Not_Subsidised_8_text,eighth_dose_date,eighth_dose,Actual_eighth_dose,Actual_eighth_dose_Fortnightly,Actual_eighth_dose_Monthly,next_visit9,PBS_approved_9,PBS_approved_9_reason,Not_Subsidised_9,Not_Subsidised_9_text,ninth_dose_date,ninth_dose,Actual_ninth_dose,Actual_ninth_dose_Fortnightly,Actual_ninth_dose_Monthly,next_visit10,PBS_approved_10,PBS_approved_10_reason,Not_Subsidised_10,Not_Subsidised_10_text,tenth_dose_date,tenth_dose,Actual_tenth_dose,Actual_tenth_dose_Fortnightly,Actual_tenth_dose_Monthly";
+        _fields="Participant ID|GUID,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  site_filter_and_request(); })
+        $('#D__ID').on('back',function(){  site_filter_and_request(); })
+        //-------------------------------------
+        _table_process=function(table){
+            _default_table_process(table)
+        }
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

@@ -1,0 +1,26 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+        VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="HRCT_Chest_Date,HRCT_Chest_Result,HRCT_Chest_Comment,HRCT_Chest_File,file_server_name_HRCT_Chest_File,CT_sinuses_Date,CT_sinuses_Result,CT_sinuses_Comment,CT_sinuses_File,file_server_name_CT_sinuses_File,pH_24hr_monitor_Date,pH_24hr_monitor_Result,pH_24hr_monitor_Comment,pH_24hr_monitor_File,file_server_name_pH_24hr_monitor_File,Esophagoscopy_Date,Esophagoscopy_Result,Esophagoscopy_Comment,Esophagoscopy_File,file_server_name_Esophagoscopy_File,Polysomnography_Date,Polysomnography_Result,Polysomnography_Comment,Polysomnography_File,file_server_name_Polysomnography_File,Induced_sputum_Eosinophils_Date,Induced_sputum_Eosinophils_Result,Induced_sputum_Eosinophils_Comment,Induced_sputum_Eosinophil_File,file_server_name_Induced_sputum_Eosinophil_File,Induced_sputum_neutrophils_Date,Induced_sputum_neutrophils_Result,Induced_sputum_neutrophils_Comment,Induced_sputum_neutrophils_File,file_server_name_Induced_sputum_neutrophils_File,Laryngoscopy_Date,Laryngoscopy_Result,Laryngoscopy_Comment,Laryngoscopy_File,file_server_name_Laryngoscopy_File,FENO_Date,FENO_Result,FENO_Comment,FENO_File,file_server_name_FENO_File,Other_Date,Other_Result,Other_Comment,Other_File,file_server_name_Other_File";
+        _fields="Participant ID|GUID,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  site_filter_and_request(); })
+        $('#D__ID').on('back',function(){  site_filter_and_request(); })
+        //-------------------------------------
+        _table_process=function(table){
+            _default_table_process(table)
+        }
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

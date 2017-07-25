@@ -1,0 +1,88 @@
+{
+	"name":"AXR",
+	"url":"https://vmiis.github.io/modules/panels/panel.2.html",
+	"parameters":{
+		"sql_participant" : "@('Subject_Initials')+' '+@('Gender')+' '+@('DOB')"
+	},
+	"modules":
+	[
+		{
+		   "module_id" : "participant_login_setup",
+		   "table_id":"20010380",
+		   "url" : "/modules/participant_login_setup.html"
+		}
+		,{
+		   "module_id" : "questionnaire",
+		   "url" : "https://vmiis.github.io/modules/panels/questionnaire.html"
+		}
+	],
+	"panel":
+	{
+		"columns":
+		[
+			{
+				"sections":
+				[
+					{
+						"name":"Participants and Notes",
+						"modules":
+						[
+							{
+								"module_id":"participant",
+								"name":"Participants",
+								"table_id":"20003141",
+								"url":"/modules/participant.html",
+								"counting":"1"
+							}
+							,{
+								"module_id":"task_notes",
+								"name":"Notes",
+								"table_id":"400330",
+								"url":"/modules/task_notes.html",
+								"counting":"1"
+							}
+							,{
+								"module_id":"site_filter",
+								"name":"Site filter",
+								"table_id":"20008386",
+								"url":"/modules/site_filter.html",
+								"counting":"1"
+							}
+						]
+					}
+				]
+			}
+			,{
+				"sections":
+				[
+					{
+						"name":"Pregnancy",
+						"modules":
+						[
+							{
+								"module_id":"m_001_001",
+								"name":"Pregnancy form",
+								"table_id":"20003518",
+								"url":"/modules/task/pregnancy_form.html",
+								"counting":"1"
+							}
+						]
+					}
+					,{
+						"name":"Omalizumab (Xolair) Treatment Log",
+						"modules":
+						[
+							{
+								"module_id":"m_002_001",
+								"name":"Omalizumab (Xolair) Treatment Log",
+								"table_id":"20003783",
+								"url":"/modules/task/Omalizumab_Xolair_Treatment_Log.html",
+								"counting":"1"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

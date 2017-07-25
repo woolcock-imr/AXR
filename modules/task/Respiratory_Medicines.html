@@ -1,0 +1,26 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+        VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="Class1,Drug1,Trade_Names1,Trade_Name_Other,Device1,Dose1,Puffs_Occasion1,Occasions_Day1,prn,prn_text,Start_date,Ongoing,End_date";
+        _fields="Participant ID|GUID,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  site_filter_and_request(); })
+        $('#D__ID').on('back',function(){  site_filter_and_request(); })
+        //-------------------------------------
+        _table_process=function(table){
+            _default_table_process(table)
+        }
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

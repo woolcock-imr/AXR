@@ -1,0 +1,26 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+        VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="AQLQ1,AQLQ2,AQLQ3,AQLQ4,AQLQ5,AQLQ6,AQLQ7,AQLQ8,AQLQ9,AQLQ10,AQLQ11,AQLQ12,AQLQ13,AQLQ14,AQLQ15,AQLQ16,AQLQ17,AQLQ18,AQLQ19,AQLQ20,AQLQ21,AQLQ22,AQLQ23,AQLQ24,AQLQ25,AQLQ26,AQLQ27,AQLQ28,AQLQ29,AQLQ30,AQLQ31,AQLQ32,Total_AQLQ,Mean_AQLQ ";
+        _fields="Participant ID|GUID,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  site_filter_and_request(); })
+        $('#D__ID').on('back',function(){  site_filter_and_request(); })
+        //-------------------------------------
+        _table_process=function(table){
+            _default_table_process(table)
+        }
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

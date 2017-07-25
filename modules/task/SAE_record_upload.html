@@ -1,0 +1,26 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+        VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="SAE_file,file_server_name_SAE_file";
+        _fields="Participant ID|GUID,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  site_filter_and_request(); })
+        $('#D__ID').on('back',function(){  site_filter_and_request(); })
+        //-------------------------------------
+        _table_process=function(table){
+            _default_table_process(table)
+        }
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

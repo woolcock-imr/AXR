@@ -1,0 +1,26 @@
+<section>
+    VmInclude:__PARTS__/grid/grid.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__PARTS__/grid/grid.js
+        VmInclude:__PARTS__/style/ease-in-out.js
+        VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="Report_type,Race,Onset_date,Event_description,Seriousness_1,Seriousness_2,Seriousness_3,Seriousness_4,Ohter_Seriousness_1,Ohter_Seriousness_2,Date_death,Outcome,Date_recovered,autopsy,Last_administer_date,Drug_Name_1,Dose_1,Therapy_Date_1,Reason_for_use_1,Drug_Name_2,Dose_2,Therapy_Date_2,Reason_for_use_2,Drug_Name_3,Dose_3,Therapy_Date_3,Reason_for_use_3,Causation,Action_1,Action_2,Action_3,Action_4,Action_5,Test_Name_1,Date_1,Result_1,Normal_Range_1,Test_Name_2,Date_2,Result_2,Normal_Range_2,Test_Name_3,Date_3,Result_3,Normal_Range_3,Test_Name_4,Date_4,Result_4,Normal_Range_4,CAUSALITY,Investigator,Signature_date";
+        _fields="Participant ID|GUID,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  site_filter_and_request(); })
+        $('#D__ID').on('back',function(){  site_filter_and_request(); })
+        //-------------------------------------
+        _table_process=function(table){
+            _default_table_process(table)
+        }
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>
